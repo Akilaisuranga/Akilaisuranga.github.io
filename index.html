@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akila — Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- MATRIX CANVAS BACKGROUND -->
+  <canvas id="matrix"></canvas>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">&lt;AK/&gt;</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero-content">
+      <div class="hero-tag">&gt; initializing profile...</div>
+      <h1 class="hero-name">Hi, I'm <span class="accent">Akila</span></h1>
+      <div class="hero-roles">
+        <span class="role-text" id="roleText"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-sub">Cybersecurity student · Ethical Hacker · CTF Player 🇱🇰</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">CTF</span><span class="stat-label">Competitor</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">THM</span><span class="stat-label">Jr. Pentester</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">CWL</span><span class="stat-label">Red Team Analyst</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <div class="avatar-initials">AK</div>
+        </div>
+        <svg class="ring-svg" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="90" class="ring-track"/>
+          <circle cx="100" cy="100" r="90" class="ring-progress"/>
+        </svg>
+      </div>
+      <div class="terminal-box">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">akila@kali:~</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="t-prompt">$</span> whoami</p>
+          <p class="t-out">akila — cybersecurity student</p>
+          <p><span class="t-prompt">$</span> cat skills.txt</p>
+          <p class="t-out">ethical hacking, pentesting, CTF</p>
+          <p><span class="t-prompt">$</span> nmap -sV target.com</p>
+          <p class="t-out">Scanning... [████████░░] 80%<span class="blink">_</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-tag">// 01</span>
+      <h2>About <span class="accent">Me</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Hi, I'm <strong>Akila</strong> — a passionate cybersecurity student with a strong interest in <strong>ethical hacking</strong> and <strong>penetration testing</strong>.</p>
+        <p>I am currently following the <strong>Red Team Analyst</strong> certification course at <strong>CyberWarFare Labs</strong>, where I am learning real-world attack techniques and how professional penetration testers operate in modern environments.</p>
+        <p>I have successfully completed the <strong>TryHackMe Junior Penetration Tester</strong> path, which helped me build a solid foundation in areas like information gathering, scanning, and exploitation.</p>
+        <p>I actively participate in <strong>inter-university CTF competitions</strong> and regularly practice on <strong>TryHackMe</strong> and <strong>Hack The Box</strong>. These platforms help me improve problem-solving skills and gain hands-on experience with real-world challenges.</p>
+        <p>I strongly believe in <strong>continuous learning, consistency, and hands-on practice</strong> — because in cybersecurity, real skills matter the most.</p>
+      </div>
+      <div class="about-cards">
+        <div class="info-card">
+          <div class="info-icon">🎯</div>
+          <div>
+            <h4>Goal</h4>
+            <p>Skilled Penetration Tester & Security Professional</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>Sri Lanka 🇱🇰</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🏆</div>
+          <div>
+            <h4>Platforms</h4>
+            <p>TryHackMe · Hack The Box · CTF Events</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📚</div>
+          <div>
+            <h4>Currently</h4>
+            <p>Red Team Analyst @ CyberWarFare Labs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-tag">// 02</span>
+      <h2>Skills & <span class="accent">Tools</span></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3 class="skill-group-title">Attack Techniques</h3>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-dot"></span>SQL Injection</div>
+          <div class="skill-item"><span class="skill-dot"></span>Cross-Site Scripting (XSS)</div>
+          <div class="skill-item"><span class="skill-dot"></span>Authentication Bypass</div>
+          <div class="skill-item"><span class="skill-dot"></span>Web App Exploitation</div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">Recon & Scanning</h3>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-dot"></span>Information Gathering</div>
+          <div class="skill-item"><span class="skill-dot"></span>Network Scanning</div>
+          <div class="skill-item"><span class="skill-dot"></span>Vulnerability Analysis</div>
+          <div class="skill-item"><span class="skill-dot"></span>OSINT</div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">Tools</h3>
+        <div class="tools-grid">
+          <div class="tool-badge">Nmap</div>
+          <div class="tool-badge">Burp Suite</div>
+          <div class="tool-badge">Gobuster</div>
+          <div class="tool-badge">Metasploit</div>
+          <div class="tool-badge">Wireshark</div>
+          <div class="tool-badge">Kali Linux</div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3 class="skill-group-title">Knowledge Areas</h3>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-dot"></span>Red Team Operations</div>
+          <div class="skill-item"><span class="skill-dot"></span>CTF Challenges</div>
+          <div class="skill-item"><span class="skill-dot"></span>Web Security</div>
+          <div class="skill-item"><span class="skill-dot"></span>Linux Administration</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-tag">// 03</span>
+      <h2>Featured <span class="accent">Projects</span></h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-top">
+          <div class="project-icon">🔍</div>
+          <div class="project-links">
+            <a href="#" class="proj-link">GitHub ↗</a>
+          </div>
+        </div>
+        <h3>Web Vulnerability Scanner</h3>
+        <p>A Python-based tool to automatically detect common web vulnerabilities including XSS, SQL Injection, and open directories. Designed to assist in penetration testing workflows.</p>
+        <div class="project-tags">
+          <span>Python</span><span>Security</span><span>Web</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <div class="project-icon">🚩</div>
+          <div class="project-links">
+            <a href="#" class="proj-link">Write-up ↗</a>
+          </div>
+        </div>
+        <h3>CTF Write-ups</h3>
+        <p>Documented solutions and methodologies from inter-university and online CTF competitions. Covers challenges in web exploitation, cryptography, forensics, and OSINT.</p>
+        <div class="project-tags">
+          <span>CTF</span><span>Write-up</span><span>Research</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <div class="project-icon">🛡️</div>
+          <div class="project-links">
+            <a href="#" class="proj-link">GitHub ↗</a>
+          </div>
+        </div>
+        <h3>Network Recon Toolkit</h3>
+        <p>A collection of automated Bash scripts wrapping Nmap, Gobuster, and other recon tools into an efficient workflow for penetration testing engagements.</p>
+        <div class="project-tags">
+          <span>Bash</span><span>Nmap</span><span>Recon</span>
+        </div>
+      </div>
+
+    </div>
+    <p class="projects-note">⚡ Update these with your real projects and GitHub links!</p>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-header">
+      <span class="section-tag">// 04</span>
+      <h2><span class="accent">Certifications</span> & Training</h2>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-logo">THM</div>
+        <div class="cert-info">
+          <h4>Jr. Penetration Tester</h4>
+          <p>TryHackMe</p>
+          <span class="cert-badge completed">Completed ✓</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-logo">CWL</div>
+        <div class="cert-info">
+          <h4>Red Team Analyst</h4>
+          <p>CyberWarFare Labs</p>
+          <span class="cert-badge in-progress">In Progress ◉</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-logo">HTB</div>
+        <div class="cert-info">
+          <h4>Hack The Box</h4>
+          <p>Active Practice</p>
+          <span class="cert-badge active">Active ●</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-tag">// 05</span>
+      <h2>Get In <span class="accent">Touch</span></h2>
+    </div>
+    <div class="contact-wrapper">
+      <p class="contact-intro">I'm open to cybersecurity internships, collaborations, and CTF team invitations. Feel free to reach out!</p>
+      <div class="contact-links">
+        <a href="mailto:your@email.com" class="contact-card">
+          <span class="contact-icon">✉</span>
+          <div>
+            <h4>Email</h4>
+            <p>your@email.com</p>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/yourname" target="_blank" class="contact-card">
+          <span class="contact-icon">in</span>
+          <div>
+            <h4>LinkedIn</h4>
+            <p>/in/yourname</p>
+          </div>
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="contact-card">
+          <span class="contact-icon">⌥</span>
+          <div>
+            <h4>GitHub</h4>
+            <p>/yourusername</p>
+          </div>
+        </a>
+        <a href="https://tryhackme.com/p/yourname" target="_blank" class="contact-card">
+          <span class="contact-icon">🔐</span>
+          <div>
+            <h4>TryHackMe</h4>
+            <p>/p/yourname</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&lt;AK/&gt; — <span class="accent">Akila</span> · © 2026 · Built with HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
