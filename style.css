@@ -340,18 +340,3 @@ footer {
   border-color: #00ff7f;
   color: #00ff7f;
 }
-.social-pill.thm {
-  border-color: rgba(255, 70, 50, 0.3);
-  color: #ff6b5a;
-}
-
-.social-pill.thm:hover {
-  border-color: #ff3b2f;
-  color: #ff3b2f;
-}
-.social-icon {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-  border-radius: 3px; /* optional for smooth look */
-}
