@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akila Isuranga — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- PARTICLE BACKGROUND -->
+  <canvas id="particles"></canvas>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">AK</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ======= HOME ======= -->
+  <section id="home">
+    <div class="hero-center">
+
+      <!-- Profile Photo Circle -->
+      <div class="profile-ring">
+        <div class="profile-img-wrap">
+          <!-- Replace src with your actual photo file e.g. src="photo.jpg" -->
+          <div class="profile-placeholder">AK</div>
+        </div>
+      </div>
+
+      <h1 class="hero-name">Hi, I'm <span class="green">Akila Isuranga</span></h1>
+      <p class="hero-role"><span id="typed"></span><span class="cur">|</span></p>
+
+      <div class="hero-location">
+        <span class="loc-dot">📍</span> Colombo, Sri Lanka 🇱🇰
+      </div>
+
+      <div class="hero-btns">
+        <!-- Replace href with your actual CV file e.g. href="Akila_Isuranga_CV.pdf" -->
+        <a href="Akila_Isuranga_CV.pdf" download class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/akila-isuranga-4b4406293" target="_blank" class="social-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="social-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://tryhackme.com/p/yourusername" target="_blank" class="social-pill thm">
+          🔐 TryHackMe
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======= ABOUT ======= -->
+  <section id="about">
+    <div class="container">
+      <div class="sec-label">// about me</div>
+      <h2 class="sec-title">Nice to <span class="green">Meet You!</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hi, I'm <strong>Akila Isuranga</strong> — a passionate cybersecurity student with a strong interest in <strong>ethical hacking</strong> and <strong>penetration testing</strong>.</p>
+          <p>I am currently following the <strong>Red Team Analyst</strong> certification course at <strong>CyberWarFare Labs</strong>, where I am learning real-world attack techniques and how professional penetration testers operate in modern environments.</p>
+          <p>I have successfully completed the <strong>TryHackMe Junior Penetration Tester</strong> path, which helped me build a solid foundation in areas like information gathering, scanning, and exploitation.</p>
+          <p>I actively participate in <strong>inter-university CTF competitions</strong> and regularly practice on <strong>TryHackMe</strong> and <strong>Hack The Box</strong>. These platforms help me sharpen problem-solving skills and gain hands-on experience with real-world cybersecurity challenges.</p>
+          <p>I have worked with tools such as <strong>Nmap, Burp Suite, Gobuster</strong>, and browser developer tools to analyze web applications and identify vulnerabilities. I have practical experience with <strong>SQL Injection, XSS, and authentication bypass</strong> techniques.</p>
+          <p>I strongly believe in <strong>continuous learning, consistency, and hands-on practice</strong> — because in cybersecurity, real skills matter the most.</p>
+        </div>
+        <div class="about-side">
+          <div class="about-card">
+            <div class="acard-icon">🎯</div>
+            <div>
+              <h4>Goal</h4>
+              <p>Skilled Penetration Tester & Security Professional</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon">🎓</div>
+            <div>
+              <h4>Education</h4>
+              <p>Undergraduate — IT / Cybersecurity</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon">🏆</div>
+            <div>
+              <h4>Platforms</h4>
+              <p>TryHackMe · Hack The Box · CTF Events</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon">📚</div>
+            <div>
+              <h4>Currently Studying</h4>
+              <p>Red Team Analyst @ CyberWarFare Labs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SKILLS ======= -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-label">// skills & tools</div>
+      <h2 class="sec-title">What I <span class="green">Work With</span></h2>
+      <div class="skills-wrap">
+        <div class="skill-col">
+          <h3 class="skill-heading">Attack Techniques</h3>
+          <div class="skill-bars">
+            <div class="sbar"><div class="sbar-label"><span>SQL Injection</span><span>85%</span></div><div class="sbar-track"><div class="sbar-fill" style="--w:85%"></div></div></div>
+            <div class="sbar"><div class="sbar-label"><span>XSS</span><span>80%</span></div><div class="sbar-track"><div class="sbar-fill" style="--w:80%"></div></div></div>
+            <div class="sbar"><div class="sbar-label"><span>Auth Bypass</span><span>75%</span></div><div class="sbar-track"><div class="sbar-fill" style="--w:75%"></div></div></div>
+            <div class="sbar"><div class="sbar-label"><span>Web Exploitation</span><span>78%</span></div><div class="sbar-track"><div class="sbar-fill" style="--w:78%"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-heading">Recon & Scanning</h3>
+          <div class="skill-bars">
+            <div class="sbar"><div class="sbar-label"><span>Nmap</span><span>88%</span></div><div class="sbar-track"><div class="sbar-fill" style="--w:88%"></div></div></div>
+            <div class="sbar"><div class="sbar-label"><span>Burp Suite</span><span>80%</span></div><div class="sbar-track"><div class="sbar-fill" style="--w:80%"></div></div></div>
+            <div class="sbar"><div class="sbar-label"><span>Gobuster</span><span>75%</span></div><div class="sbar-track"><div class="sbar-fill" style="--w:75%"></div></div></div>
+            <div class="sbar"><div class="sbar-label"><span>OSINT</span><span>70%</span></div><div class="sbar-track"><div class="sbar-fill" style="--w:70%"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tools-row">
+        <div class="tool-chip">🛡️ Nmap</div>
+        <div class="tool-chip">🕷️ Burp Suite</div>
+        <div class="tool-chip">📂 Gobuster</div>
+        <div class="tool-chip">🐧 Kali Linux</div>
+        <div class="tool-chip">🌐 Wireshark</div>
+        <div class="tool-chip">💣 Metasploit</div>
+        <div class="tool-chip">🔑 Hydra</div>
+        <div class="tool-chip">🐍 Python</div>
+        <div class="tool-chip">📡 Netcat</div>
+        <div class="tool-chip">🔍 OSINT Tools</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROJECTS ======= -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-label">// featured projects</div>
+      <h2 class="sec-title">My <span class="green">Projects</span></h2>
+      <div class="projects-grid">
+
+        <div class="proj-card">
+          <div class="proj-top">
+            <span class="proj-emoji">🔍</span>
+            <a href="#" class="proj-gh-link" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              Source
+            </a>
+          </div>
+          <h3>Web Vulnerability Scanner</h3>
+          <p>A Python-based tool that automatically detects common web vulnerabilities including XSS, SQL Injection, and open directories to assist in penetration testing workflows.</p>
+          <div class="proj-tags"><span>Python</span><span>Security</span><span>Automation</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-top">
+            <span class="proj-emoji">🚩</span>
+            <a href="#" class="proj-gh-link" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              Write-ups
+            </a>
+          </div>
+          <h3>CTF Write-ups Collection</h3>
+          <p>Documented solutions from inter-university and online CTF competitions including CryptX 1.0. Covers web exploitation, cryptography, forensics, and OSINT challenges.</p>
+          <div class="proj-tags"><span>CTF</span><span>Write-up</span><span>Research</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-top">
+            <span class="proj-emoji">🛡️</span>
+            <a href="#" class="proj-gh-link" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              Source
+            </a>
+          </div>
+          <h3>Network Recon Toolkit</h3>
+          <p>Automated Bash scripts wrapping Nmap, Gobuster, and other tools into an efficient recon workflow for penetration testing engagements.</p>
+          <div class="proj-tags"><span>Bash</span><span>Nmap</span><span>Recon</span></div>
+        </div>
+
+      </div>
+      <p class="proj-note">⚡ Replace these with your real GitHub project links!</p>
+    </div>
+  </section>
+
+  <!-- ======= CERTIFICATIONS ======= -->
+  <section id="certifications">
+    <div class="container">
+      <div class="sec-label">// licenses & certifications</div>
+      <h2 class="sec-title">My <span class="green">Certifications</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card">
+          <div class="cert-left">
+            <div class="cert-org-badge thm-badge">THM</div>
+          </div>
+          <div class="cert-body">
+            <h4>Jr Penetration Tester</h4>
+            <p class="cert-org">TryHackMe</p>
+            <p class="cert-date">Issued Jan 2025</p>
+            <p class="cert-id">ID: THM-INC7YHZOKB</p>
+            <div class="cert-actions">
+              <span class="cert-status done">✓ Completed</span>
+              <a href="https://tryhackme.com/certificate/THM-INC7YHZOKB" target="_blank" class="cert-link">Show credential ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-left">
+            <div class="cert-org-badge thm-badge">THM</div>
+          </div>
+          <div class="cert-body">
+            <h4>Advent of Cyber 2025</h4>
+            <p class="cert-org">TryHackMe</p>
+            <p class="cert-date">Issued Dec 2025</p>
+            <p class="cert-id">ID: THM-FYWGMGBIEN</p>
+            <div class="cert-actions">
+              <span class="cert-status done">✓ Completed</span>
+              <a href="https://tryhackme.com/certificate/THM-FYWGMGBIEN" target="_blank" class="cert-link">Show credential ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-left">
+            <div class="cert-org-badge thm-badge">THM</div>
+          </div>
+          <div class="cert-body">
+            <h4>Introduction to Cyber Security</h4>
+            <p class="cert-org">TryHackMe</p>
+            <p class="cert-date">Issued Nov 2024</p>
+            <p class="cert-id">ID: THM-AEHD3EGU03</p>
+            <div class="cert-actions">
+              <span class="cert-status done">✓ Completed</span>
+              <a href="https://tryhackme.com/certificate/THM-AEHD3EGU03" target="_blank" class="cert-link">Show credential ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-left">
+            <div class="cert-org-badge thm-badge">THM</div>
+          </div>
+          <div class="cert-body">
+            <h4>Pre Security</h4>
+            <p class="cert-org">TryHackMe</p>
+            <p class="cert-date">Issued Nov 2024</p>
+            <p class="cert-id">ID: THM-RBURQZ3I5L</p>
+            <div class="cert-actions">
+              <span class="cert-status done">✓ Completed</span>
+              <a href="https://tryhackme.com/certificate/THM-RBURQZ3I5L" target="_blank" class="cert-link">Show credential ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-left">
+            <div class="cert-org-badge cisco-badge">CISCO</div>
+          </div>
+          <div class="cert-body">
+            <h4>CCNA: Introduction to Networks</h4>
+            <p class="cert-org">Cisco</p>
+            <p class="cert-date">Issued Dec 2024</p>
+            <p class="cert-skills">Skills: Network Switches · Cisco Routers</p>
+            <div class="cert-actions">
+              <span class="cert-status done">✓ Completed</span>
+              <a href="#" class="cert-link">Show credential ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-left">
+            <div class="cert-org-badge cisco-badge">CISCO</div>
+          </div>
+          <div class="cert-body">
+            <h4>Introduction to Cybersecurity</h4>
+            <p class="cert-org">Cisco</p>
+            <p class="cert-date">Issued Jun 2024</p>
+            <div class="cert-actions">
+              <span class="cert-status done">✓ Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-left">
+            <div class="cert-org-badge ctf-badge">CTF</div>
+          </div>
+          <div class="cert-body">
+            <h4>CryptX 1.0 CTF</h4>
+            <p class="cert-org">ICTS — Information and Communication Technology Society</p>
+            <p class="cert-date">Participation Certificate</p>
+            <div class="cert-actions">
+              <span class="cert-status active">● CTF Player</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-left">
+            <div class="cert-org-badge esoft-badge">ESOFT</div>
+          </div>
+          <div class="cert-body">
+            <h4>Diploma in English (DiE)</h4>
+            <p class="cert-org">ESOFT Metro Campus</p>
+            <p class="cert-date">Issued Mar 2023</p>
+            <p class="cert-id">ID: 00178701</p>
+            <div class="cert-actions">
+              <span class="cert-status done">✓ Completed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT ======= -->
+  <section id="contact">
+    <div class="container contact-wrap">
+      <div class="sec-label">// get in touch</div>
+      <h2 class="sec-title">Contact <span class="green">Me</span></h2>
+      <p class="contact-sub">Open to cybersecurity internships, CTF team invitations, and collaborations. Feel free to reach out!</p>
+      <div class="contact-grid">
+        <a href="mailto:your@email.com" class="contact-card">
+          <div class="cc-icon">✉</div>
+          <div>
+            <h4>Email</h4>
+            <p>your@email.com</p>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/akila-isuranga-4b4406293" target="_blank" class="contact-card">
+          <div class="cc-icon">in</div>
+          <div>
+            <h4>LinkedIn</h4>
+            <p>akila-isuranga</p>
+          </div>
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="contact-card">
+          <div class="cc-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          </div>
+          <div>
+            <h4>GitHub</h4>
+            <p>/yourusername</p>
+          </div>
+        </a>
+        <a href="https://tryhackme.com/p/yourusername" target="_blank" class="contact-card">
+          <div class="cc-icon">🔐</div>
+          <div>
+            <h4>TryHackMe</h4>
+            <p>/p/yourusername</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <span class="green">Akila Isuranga</span>. All rights reserved. · Built with HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
