@@ -331,3 +331,13 @@ footer {
   .skills-wrap { grid-template-columns: 1fr; }
   .hero-btns { flex-direction: column; align-items: center; }
 }
+.social-pill.htb {
+  border-color: rgba(0, 255, 120, 0.25);
+  color: #9affc7;
+}
+
+.social-pill.htb:hover {
+  border-color: #00ff7f;
+  color: #00ff7f;
+}
+
