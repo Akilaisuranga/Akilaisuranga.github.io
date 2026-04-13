@@ -254,33 +254,52 @@ section { position: relative; z-index: 1; }
 }
 .skill-col-sub { font-size: 12px; color: var(--muted); font-family: var(--mono); }
 
-.skill-bars { display: flex; flex-direction: column; gap: 1.4rem; }
+.skill-bars { display: flex; flex-direction: column; gap: 1.6rem; }
 
-.sbar-label {
-  display: flex; justify-content: space-between;
-  font-size: 13px; font-weight: 600; color: var(--text);
+/* Row: skill name on left, % on right */
+.sbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 3px;
 }
-.sbar-label span:last-child { color: var(--green); font-weight: 700; }
-
-/* New: description line under each bar label */
-.sbar-desc {
-  font-size: 11px; color: var(--muted);
+.sbar-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.sbar-pct {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green);
   font-family: var(--mono);
-  margin-bottom: 7px;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* Subtitle description in mono under the name */
+.sbar-desc {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: var(--mono);
+  margin-bottom: 8px;
   line-height: 1.4;
 }
 
 .sbar-track {
-  height: 7px; background: rgba(0,255,127,.08);
-  border-radius: 99px; overflow: hidden;
+  height: 7px;
+  background: rgba(0,255,127,.08);
+  border-radius: 99px;
+  overflow: hidden;
   border: 1px solid rgba(0,255,127,.12);
 }
 .sbar-fill {
-  height: 100%; width: var(--w);
+  height: 100%;
+  width: var(--w);
   background: linear-gradient(90deg, var(--green2), var(--green));
   border-radius: 99px;
-  transform: scaleX(0); transform-origin: left;
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform 1.2s cubic-bezier(.22,1,.36,1);
 }
 .sbar-fill.animate { transform: scaleX(1); }
