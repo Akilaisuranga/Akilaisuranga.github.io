@@ -48,7 +48,7 @@ body {
 #navbar.scrolled { box-shadow: 0 4px 40px rgba(0,255,127,0.07); }
 
 .nav-logo {
-  font-weight: 800; font-size: 20px;
+  font-weight: 800;
   color: var(--green); letter-spacing: 1px;
   width: 42px; height: 42px;
   border: 2px solid var(--green);
@@ -94,13 +94,17 @@ section { position: relative; z-index: 1; }
 
 .hero-center { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
 
-/* PROFILE RING — matches Nisal's glowing circle */
+/* =============================================
+   FIX 1: PROFILE RING — NO ROTATION
+   Glow effect kept, spin animation REMOVED
+   ============================================= */
 .profile-ring {
   width: 170px; height: 170px;
   border-radius: 50%;
   padding: 4px;
+  /* Static gradient border — no animation */
   background: conic-gradient(var(--green) 0deg, var(--green2) 120deg, transparent 240deg, var(--green) 360deg);
-  animation: spin 6s linear infinite;
+  /* animation: spin 6s linear infinite; ← REMOVED */
   margin-bottom: .5rem;
   position: relative;
 }
@@ -109,8 +113,16 @@ section { position: relative; z-index: 1; }
   position: absolute; inset: -4px;
   border-radius: 50%;
   background: transparent;
+  /* Pulse glow kept — only the ring stops spinning */
   box-shadow: 0 0 30px rgba(0,255,127,0.35), 0 0 60px rgba(0,255,127,0.12);
+  animation: pulse-glow 3s ease-in-out infinite;
 }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 25px rgba(0,255,127,0.30), 0 0 55px rgba(0,255,127,0.10); }
+  50%       { box-shadow: 0 0 40px rgba(0,255,127,0.55), 0 0 80px rgba(0,255,127,0.20); }
+}
+
 .profile-img-wrap {
   width: 100%; height: 100%; border-radius: 50%;
   overflow: hidden;
@@ -123,6 +135,7 @@ section { position: relative; z-index: 1; }
   font-size: 42px; font-weight: 800; color: var(--green);
 }
 
+/* spin keyframe kept in case used elsewhere, but not applied to ring */
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .hero-name {
@@ -169,17 +182,51 @@ section { position: relative; z-index: 1; }
 }
 .btn-outline:hover { background: var(--green-dim); transform: translateY(-2px); }
 
-.hero-socials { display: flex; gap: .75rem; flex-wrap: wrap; justify-content: center; animation: fadeUp .7s .4s ease both; }
+/* =============================================
+   FIX 2: SOCIAL PILLS — THM icon corrected
+   Uses text "THM" label instead of broken SVG
+   ============================================= */
+.hero-socials {
+  display: flex; gap: .75rem; flex-wrap: wrap; justify-content: center;
+  animation: fadeUp .7s .4s ease both;
+}
 .social-pill {
   display: inline-flex; align-items: center; gap: 7px;
   padding: 7px 16px; border-radius: 99px;
   border: 1px solid var(--border);
   font-size: 13px; color: var(--muted);
   text-decoration: none; transition: border-color .2s, color .2s;
+  white-space: nowrap;
 }
+.social-pill svg { flex-shrink: 0; width: 15px; height: 15px; }
 .social-pill:hover { border-color: var(--green); color: var(--green); }
-.social-pill.thm { border-color: rgba(255,100,50,.25); color: #ff9966; }
-.social-pill.thm:hover { border-color: #ff6432; color: #ff6432; }
+
+/* TryHackMe — red/orange accent */
+.social-pill.thm {
+  border-color: rgba(255, 70, 50, 0.3);
+  color: #ff6b5a;
+}
+.social-pill.thm:hover { border-color: #ff3b2f; color: #ff3b2f; }
+
+/* THM icon badge — replaces broken SVG */
+.thm-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 17px; height: 17px;
+  background: #ff3b2f;
+  border-radius: 4px;
+  font-size: 8px; font-weight: 800;
+  color: #fff;
+  font-family: var(--mono);
+  flex-shrink: 0;
+  letter-spacing: -0.5px;
+}
+
+/* HackTheBox — green accent */
+.social-pill.htb {
+  border-color: rgba(0, 255, 120, 0.25);
+  color: #9affc7;
+}
+.social-pill.htb:hover { border-color: #00ff7f; color: #00ff7f; }
 
 /* ===== ABOUT ===== */
 #about { background: var(--bg2); }
@@ -262,7 +309,6 @@ section { position: relative; z-index: 1; }
   transition: border-color .2s, transform .2s;
 }
 .cert-card:hover { border-color: rgba(0,255,127,.35); transform: translateY(-3px); }
-
 .cert-org-badge {
   font-family: var(--mono); font-weight: 700; font-size: 11px;
   padding: 10px 8px; border-radius: 8px; min-width: 52px;
@@ -272,7 +318,6 @@ section { position: relative; z-index: 1; }
 .cisco-badge { background: rgba(0,120,255,.09); color: #4db8ff; border: 1px solid rgba(0,120,255,.2); }
 .ctf-badge   { background: rgba(255,140,0,.08); color: #ffa040; border: 1px solid rgba(255,140,0,.2); }
 .esoft-badge { background: rgba(180,100,255,.08); color: #c078ff; border: 1px solid rgba(180,100,255,.2); }
-
 .cert-body h4 { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
 .cert-org { font-size: 13px; color: var(--muted); }
 .cert-date { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 3px; }
@@ -285,16 +330,29 @@ section { position: relative; z-index: 1; }
 .cert-link { font-size: 12px; color: var(--blue); text-decoration: none; transition: color .2s; }
 .cert-link:hover { color: var(--green); }
 
-/* ===== CONTACT ===== */
+/* =============================================
+   FIX 3: CONTACT — email text wraps & fits
+   Added min-width:0, overflow-wrap, and
+   word-break so long emails don't overflow
+   ============================================= */
 #contact { background: var(--bg2); }
 .contact-wrap { text-align: center; }
 .contact-sub { font-size: 15px; color: var(--muted); max-width: 540px; margin: -1.5rem auto 2.5rem; }
-.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; max-width: 760px; margin: 0 auto; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
 .contact-card {
   display: flex; align-items: center; gap: 1rem;
   padding: 1.1rem 1.25rem;
   background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
   text-decoration: none; transition: border-color .2s, transform .2s;
+  /* FIX: prevent card expanding beyond grid cell */
+  min-width: 0;
+  overflow: hidden;
 }
 .contact-card:hover { border-color: rgba(0,255,127,.35); transform: translateY(-3px); }
 .cc-icon {
@@ -304,8 +362,22 @@ section { position: relative; z-index: 1; }
   color: var(--green); font-size: 16px; font-family: var(--mono);
   font-weight: 700; flex-shrink: 0;
 }
-.contact-card h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-.contact-card p { font-size: 12px; color: var(--muted); }
+/* FIX: text container must shrink and wrap */
+.contact-card > div {
+  min-width: 0;
+  flex: 1;
+}
+.contact-card h4 {
+  font-size: 14px; font-weight: 600; color: var(--text);
+  margin-bottom: 2px;
+}
+.contact-card p {
+  font-size: 12px; color: var(--muted);
+  /* FIX: allow long emails to wrap inside the box */
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
 
 /* ===== FOOTER ===== */
 footer {
@@ -330,22 +402,5 @@ footer {
   .about-grid { grid-template-columns: 1fr; }
   .skills-wrap { grid-template-columns: 1fr; }
   .hero-btns { flex-direction: column; align-items: center; }
-}
-.social-pill.htb {
-  border-color: rgba(0, 255, 120, 0.25);
-  color: #9affc7;
-}
-
-.social-pill.htb:hover {
-  border-color: #00ff7f;
-  color: #00ff7f;
-}
-.social-pill.thm {
-  border-color: rgba(255, 70, 50, 0.3);
-  color: #ff6b5a;
-}
-
-.social-pill.thm:hover {
-  border-color: #ff3b2f;
-  color: #ff3b2f;
+  .contact-grid { grid-template-columns: 1fr; }
 }
