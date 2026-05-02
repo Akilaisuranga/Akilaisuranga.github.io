@@ -1,9 +1,8 @@
-// ===== PARTICLE BACKGROUND (floating dots like Nisal's) =====
+// ===== PARTICLE BACKGROUND =====
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 let W = canvas.width = window.innerWidth;
 let H = canvas.height = window.innerHeight;
-
 const dots = Array.from({length: 80}, () => ({
   x: Math.random() * W,
   y: Math.random() * H,
@@ -12,7 +11,6 @@ const dots = Array.from({length: 80}, () => ({
   dy: (Math.random() - 0.5) * 0.3,
   a: Math.random() * 0.5 + 0.1
 }));
-
 function drawParticles() {
   ctx.clearRect(0, 0, W, H);
   dots.forEach(d => {
@@ -24,7 +22,6 @@ function drawParticles() {
     if (d.x < 0 || d.x > W) d.dx *= -1;
     if (d.y < 0 || d.y > H) d.dy *= -1;
   });
-  // Draw connecting lines
   dots.forEach((a, i) => {
     dots.slice(i + 1).forEach(b => {
       const dist = Math.hypot(a.x - b.x, a.y - b.y);
@@ -41,7 +38,6 @@ function drawParticles() {
   requestAnimationFrame(drawParticles);
 }
 drawParticles();
-
 window.addEventListener('resize', () => {
   W = canvas.width = window.innerWidth;
   H = canvas.height = window.innerHeight;
@@ -57,7 +53,6 @@ const roles = [
 ];
 let ri = 0, ci = 0, del = false;
 const el = document.getElementById('typed');
-
 function type() {
   const cur = roles[ri];
   el.textContent = del ? cur.slice(0, --ci) : cur.slice(0, ++ci);
@@ -71,7 +66,6 @@ type();
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', scrollY > 30);
-  // active link
   document.querySelectorAll('section[id]').forEach(sec => {
     if (scrollY >= sec.offsetTop - 120) {
       document.querySelectorAll('.nav-links a').forEach(a => {
@@ -90,9 +84,8 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 });
 
 // ===== SCROLL REVEAL =====
-const revealEls = document.querySelectorAll('.proj-card, .cert-card, .about-card, .contact-card, .skill-col, .sbar');
+const revealEls = document.querySelectorAll('.proj-card, .cert-card, .about-card, .contact-card, .skill-col, .sbar, .wu-card');
 revealEls.forEach(el => el.classList.add('reveal'));
-
 const revObs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
 }, { threshold: 0.12 });
@@ -105,3 +98,28 @@ const barObs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.4 });
 document.querySelectorAll('.sbar').forEach(b => barObs.observe(b));
+
+// ===== WRITE-UP FILTERS =====
+const filterBtns = document.querySelectorAll('.wu-filter');
+const wuCards = document.querySelectorAll('.wu-card');
+const wuEmpty = document.getElementById('wuEmpty');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Update active button
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    let visibleCount = 0;
+
+    wuCards.forEach(card => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.style.display = match ? '' : 'none';
+      if (match) visibleCount++;
+    });
+
+    // Show empty state if no cards match
+    wuEmpty.style.display = visibleCount === 0 ? 'block' : 'none';
+  });
+});
